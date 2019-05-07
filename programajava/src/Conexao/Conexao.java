@@ -1,4 +1,3 @@
-
 package Conexao;
 
 import java.sql.Connection;
@@ -16,7 +15,7 @@ public class Conexao {
     private static Connection conn;
     private final static String driver = "org.postgresql.Driver";
     private final static String ip = "localhost/";
-    public static String dataBase = "formulabase";
+    public static String dataBase = "postgres";
     public static String user = "postgres";
     public static String password = "postgres";
 

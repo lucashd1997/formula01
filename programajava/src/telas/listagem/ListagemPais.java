@@ -6,10 +6,11 @@ import javax.swing.table.DefaultTableModel;
 import telas.manutencao.ManutencaoPais;
 
 public class ListagemPais extends javax.swing.JDialog {
+
     public ListagemPais(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+
         atualizarTabela();
     }
 
@@ -88,17 +89,17 @@ public class ListagemPais extends javax.swing.JDialog {
         manutencao.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-   public void atualizarTabela(){
-        DefaultTableModel modelo = new DefaultTableModel(); 
+    public void atualizarTabela() {
+        DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("Sigla");
         modelo.addColumn("Nome");
         List<String[]> resultados = PaisDao.consultar();
-        for(String[] linha: resultados){
+        for (String[] linha : resultados) {
             modelo.addRow(linha);
         }
         tabela.setModel(modelo);
     }
-   
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
